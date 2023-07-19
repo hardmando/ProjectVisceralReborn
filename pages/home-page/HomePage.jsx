@@ -1,7 +1,6 @@
 import { HomePageScrollWrapper, HomePageWrapper } from "./styledHomePage";
 import Month from "../../components/month-text/Month";
 import CategoryCard from "../../components/elements/category-card/CategoryCard";
-import OverlayAdd from "../../components/elements/overlay-add/OverlayAdd";
 
 const HomePage = ({active}) => {
 
