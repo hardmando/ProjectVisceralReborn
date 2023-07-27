@@ -2,8 +2,8 @@ import { useState } from "react";
 import HomePage from "../../pages/home-page/HomePage";
 import ControlBar from "../control-bar/ControlBar";
 import { ScreenControllerWrapper } from "./styledScreenController";
-import SettingsPage from "../settings-page/SettingPage";
-import ProfilePage from "../profile-page/ProfilePage";
+import SettingsPage from "../../pages/settings-page/SettingPage";
+import ProfilePage from "../../pages/profile-page/ProfilePage";
 
 const ScreenController = () => {
     const [activeTab, setActiveTab] = useState('home')

@@ -7,19 +7,21 @@ ${props =>
     props.active === true ? 
         `
             width: 50%;
-            height: 100%;
+            height: 60%;
             z-index: 1002;
+            top: 9%;
         `
     : props.active === false ?
         `
             width: 25%;
-            height: 90%;
+            height: 58%;
             z-index: 0;
+            top: 10%;
         `
     : 
         `
         width: 25%;
-        height: 90%;
+        height: 58%;
         z-index: -1;
         `
 };

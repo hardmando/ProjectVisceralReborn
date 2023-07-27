@@ -16,8 +16,13 @@ const HomePage = ({active}) => {
                     height: 1300
                 }}
             >
-                <CategoryCard />
-                <CategoryCard />
+                <CategoryCard
+                    categoryName='Test'
+                    categoryTotal='999.99'
+                />
+                <CategoryCard
+                    categoryTotal='30'
+                />
                 <CategoryCard />
                 <CategoryCard />
                 <CategoryCard />

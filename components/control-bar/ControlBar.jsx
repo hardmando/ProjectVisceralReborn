@@ -1,17 +1,22 @@
 import {StyledControlBarWrapper } from './styledControlBar';
 import { useState } from 'react'
 import ControlButton from '../elements/control-button/ControlButton';
+import Total from '../total/Total';
 
 const ControlBar = ({activeTab,  setActiveTab}) => {
 
     return (
         <StyledControlBarWrapper>
+            <Total 
+                active={activeTab === 'home' ? true : false}
+                
+                />
             <ControlButton
                 active={activeTab === 'settings' ? true : false}
                 title="Settings"
                 tabName='settings'
                 setActiveTab={setActiveTab}
-                icon='setting'
+                icon='cog'
             />
             <ControlButton
                 active={activeTab === 'home' ? true : false}
@@ -25,7 +30,7 @@ const ControlBar = ({activeTab,  setActiveTab}) => {
                 title="Profile"
                 tabName='profile'
                 setActiveTab={setActiveTab}
-                icon='user'
+                icon='person'
             />
         </StyledControlBarWrapper>
     );

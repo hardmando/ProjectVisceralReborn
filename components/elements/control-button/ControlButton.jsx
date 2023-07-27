@@ -1,7 +1,7 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { ControlButtonWrapper, ControlButtonPressable } from "./styledControlButton";
 import DropShadow from "react-native-drop-shadow";
-import Icon from 'react-native-vector-icons/AntDesign'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const ControlButton = ({active, tabName, setActiveTab, icon}) => {
     return(

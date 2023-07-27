@@ -1,7 +1,6 @@
 import styled from 'styled-components/native'
 
 export const CategoryCardWrapper = styled.View`
-    background: red;
     width: 83%;
     height: 8.5%;
     border-radius: 10%;
@@ -9,28 +8,46 @@ export const CategoryCardWrapper = styled.View`
     justify-items: center;
 `
 export const CardTitle = styled.Text`
-
+    font-size: 30px;
+    align-self: flex-start;
+    width: 40%;
+    height: 75%;
+    margin-left: 3%;
+    color: #583252;
 `
 export const ClosePopUpPressable = styled.Pressable`
-    background: #2196F3;
-    width: 30%;
-    height: 40%;
-    align-self: center;
+    height: 0;
+    width: 0;
+    background: red;
+    margin-right: 200px;
+`
+export const SubmitPopUpPressable = styled.Pressable`
+    height: 0;
+    width: 0;
+    background: red;
+    margin-right: 200px;
 `
 export const PopUpContentWrapper = styled.View`
-    background: white;
     justify-items: center;
+    justify-cont: center;
     align-items: center;
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    border: 1px black solid;
-    border-radius: 10%;
+    width: 100%;
+    height: 70%;
 `
 export const PopUpWrapper = styled.View`
-    background: blue;
     justify-items: center;
     align-items: center;
     position: absolute;
     width: 100%;
+`
+export const PopUpInput = styled.TextInput`
+    background: white;
+    height: 25%;
+    width: 80%;
+    margin: 12px;
+    border: 1px solid #583252;
+    padding: 9px;
+    font-size: 30px;
+    text-align: right;
+    border-radius: 10px;
 `

@@ -1,9 +1,12 @@
 import DropShadow from "react-native-drop-shadow";
-import { CardButtonWrapper } from "./styledCardButton";
+import { CardButtonWrapper, CardTotal } from "./styledCardButton";
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from 'react-native-vector-icons/AntDesign'
+import { CardTitle } from "../category-card/styledCategoryCard";
+import { Alert } from "react-native";
+import db from '../../../DatabaseService'
 
-const CardButton = ({setModalVisible}) => {
+const CardButton = ({setModalVisible, categoryName, categoryTotal}) => {
     return(
             <DropShadow
             style={{
@@ -14,6 +17,7 @@ const CardButton = ({setModalVisible}) => {
                 },
                 shadowOpacity: 0.7,
                 shadowRadius: 5,
+                width: '100%',
             }}
             >
                 <LinearGradient
@@ -22,12 +26,14 @@ const CardButton = ({setModalVisible}) => {
                     colors={['#FFEFE9', '#FFCFE4']} 
                     style={{
                         height: '100%',
-                        alignContent: 'center',
-                        justifyContent: 'center',
                         opacity: 1,
-                        borderRadius: 9
+                        borderRadius: 9,
+                        flexDirection:'row',
+                        alignContent: 'stretch'
                     }}   
                 >
+                    <CardTitle>{categoryName}</CardTitle>
+                    <CardTotal>{categoryTotal}</CardTotal>
                     <DropShadow
                         style={{
                         shadowColor: "#583252",
@@ -40,7 +46,9 @@ const CardButton = ({setModalVisible}) => {
                         }}
                     >
                         <CardButtonWrapper
-                            onPress={() => setModalVisible(true)}
+                            onPress={() => {
+                                setModalVisible(true);
+                            }}
                         > 
                             <LinearGradient
                                 start={[0,0]}
@@ -51,7 +59,8 @@ const CardButton = ({setModalVisible}) => {
                                     alignContent: 'center',
                                     justifyContent: 'center',
                                     opacity: 1,
-                                    borderRadius: 9
+                                    borderRadius: 9,
+                                    width: 100,
                                 }}   
                             >
                                 <Icon
